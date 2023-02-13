@@ -16,6 +16,18 @@
     grid-template-columns: 300px 700px;
 }
 
+@media screen and (max-width:630px) {
+    .main-content{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media screen and (max-width:673px) {
+    .main-content{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
 .left-section {
     height: 1000px;
     background-color: #242531;
