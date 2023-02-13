@@ -1,38 +1,38 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     list-style: none;
+    box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
-
-
 
 .main-content {
     display: grid;
-    width: 90%;
-    min-height: 1000px;
-    margin: 20px auto;
     grid-template-columns: 300px 700px;
+    min-height: 1000px;
+    width: 90%;
+    margin: 20px auto;
 }
 
 @media screen and (max-width:630px) {
     .main-content{
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
 @media screen and (max-width:673px) {
     .main-content{
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
 .left-section {
     height: 1000px;
-    background-color: #242531;
-    grid-column: span 1;
     margin-left: 5%;
+    grid-area: 1/1/3/2;
+    grid-column: span 1;
+    background-color: #242531;
 }
 
 .left-content {
@@ -40,42 +40,36 @@
 }
 
 .profile-image {
-    width: 60%;
-    height: 150px;
-    border-radius: 30%;
-    border: 5px solid white;
     display: block;
     margin: auto;
-    align-items: center;
+    border: 5px solid white;
+    border-radius: 30%;
+    width: 60%;
 }
 
 .name {
-    color: white;
     font-size: 1.2rem;
     font-weight: 700;
-    text-transform: uppercase;
     text-align: center;
+    text-transform: uppercase;
     letter-spacing: 0.02px;
     padding: 0.8rem;
+    color: white;
 }
 
 .designation {
     font-size: 1rem;
     text-align: center;
-    color: skyblue;
-    padding-bottom: 0.5rem;
     text-transform: uppercase;
+    padding-bottom: 0.5rem;
+    color: skyblue;
 }
 
 .description {
-    color: white;
     font-size: 0.75rem;
     text-align: center;
     padding: 1rem;
-}
-
-.contact-item {
-    width: 100%;
+    color: white;
 }
 
 .social-media {
@@ -84,7 +78,22 @@
     justify-content: center;
 }
 
+.icon a {
+    text-decoration: none;
+    color: white;
+    line-height: 1.8rem;
+}
+
+.icon a i {
+    color: rgb(43, 90, 219);
+}
+
 .social-media .icon {
+    flex: 1;
+    color: rgb(103, 103, 235);
+}
+
+.personal-details .icon {
     flex: 1;
     color: rgb(103, 103, 235);
 }
@@ -101,82 +110,49 @@
     font-size: inherit;
 }
 
-.personal-details {
-    color: white;
-    font-size: 0.75rem;
-    text-align: start;
-    padding: 1rem;
-}
-
 .skills {
     font-size: 0.75rem;
-    text-align: center;
     text-transform: uppercase;
+    padding: 1rem 0.5rem 1rem 0.5rem;
     color: white;
-    padding-top: 1rem;
-    padding-bottom: 0.5rem;
+    line-height: 1.8rem;
 }
 
-.skill-item {
-    width: 100%;
-    padding: 0.75rem;
+.skills-title{
+    text-align: center;
 }
 
 .skill-name {
     font-size: 0.65rem;
-    font-weight: 0.65rem;
     text-align: left;
     padding-bottom: 0.5rem;
-    color: white;
-}
-
-.skill-progress {
-    width: 100%;
 }
 
 .progress-bar {
     border: 1px solid white;
     height: 4px;
-    background: white;
-    border-radius: 10px;
+    background-color: white;
 }
 
 .right-section {
-    background-color: #f7f7f7;
     grid-column: span 1/ span 2;
+    background-color: #ebebeb;
     height: 1000px;
 }
 
-.right-main-content {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+.right-main-content{
+    padding: 2rem 3rem 2rem 3rem;
 }
 
-.right-title {
+.right-title{
     text-transform: uppercase;
     font-size: 1.2rem;
     font-weight: 700;
     padding: 0.5rem;
     letter-spacing: 1px;
-    color: rgb(46, 45, 45);
-    margin: 0;
-}
-.para {
-    font-size: 1rem;
-    padding: 0.5rem;
-    letter-spacing: 1px;
-    color: rgba(45, 44, 44, 0.848);
 }
 
-.education-content {
-    padding: 0.5rem;
-    letter-spacing: 1px;
-    color: rgb(81, 78, 78);
-}
-
-.education-content  * {
-    margin-top: 5px;
-    margin-bottom: 5px;
+.para{
+    display: flex;
+    justify-content: space-around;
 }
