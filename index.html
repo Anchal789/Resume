@@ -1,210 +1,524 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Anchal Deshmukh - Resume</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Anchal Resume</title>
-        <script src="https://kit.fontawesome.com/049c186ce9.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://kit.fontawesome.com/049c186ce9.css" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
-    </head>
+			@page {
+				size: A4;
+				margin: 10;
+			}
 
-    <body>
-        <main class="main-content">
-            <section class="left-section">
-                <div class="left-content">
-                    <div class="profile-details">
-                        <div class="profile">
-                            <img src="https://i.postimg.cc/pr0SDxQ4/Anchal.jpg" class="profile-image"
-                                alt="Anchal Profile Image">
-                        </div>
-                        <h2 class="name">Anchal Deshmukh</h2>
-                        <h4 class="designation">JAVA Full Stack Developer</h4>
-                        <hr>
-                        <p class="description">Java | Python | HTML | CSS | JavaScript | React</p>
-                    </div>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <div class="social-media">
-                                <li class="icon">
-                                    <a href="inkedin.com/in/anchal-deshmukh-2315241a0/"><i
-                                            class="fa fa-brands fa-linkedin fa-lg"></i></a>
-                                </li>
-                                <li class="icon">
-                                    <a href="ithub.com/Anchal789"><i class="fa fa-brands fa-github fa-lg"></i></a>
-                                </li>
-                                <li class="icon">
-                                    <a href="https://www.facebook.com/anchal.deshmukh.789/"><i
-                                            class="fa fa-brands fa-facebook fa-lg"></i></a>
-                                </li>
-                                <li class="icon">
-                                    <a href="https://twitter.com/"><i class="fa fa-brands fa-twitter fa-lg"></i></a>
-                                </li>
-                            </div>
-                            <div class="personal-details">
-                                <li class="icon">
-                                    <i class="fa fa-solid fa-envelope fa-lg"></i>
-                                    <a href="mailto:anchaldeshmukh1999@gmail.com">anchaldeshmukh1999@gmail.com</a>
-                                </li>
-                                <li class="icon">
-                                    <i class="fa fa-phone fa-lg" aria-hidden="true"></i>
-                                    <a href="tel:+917747865703">7747865703</a>
-                                </li>
-                                <li class="icon">
-                                    <i class="fa fa-solid fa-location-dot fa-lg"></i>
-                                    <a href="https://www.google.com/maps/@22.4856763,88.3591246,16z">Miragpur,
-                                        Balaghat</a>
-                                </li>
-                            </div>
-                            <br>
-                        </div>
-                    </div>
-                    <div class="skills">
-                        <h2 class="skills-title">Skills</h2>
-                        <div class="skills-content">
-                            <div class="skills-item">
-                                <div class="skills-name">
-                                    <h3>JAVA</h3>
-                                </div>
-                                <div class="skill-progress">
-                                    <div class="progress-bar" style="width: 90%;">
+			body {
+				font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+				line-height: 1.45;
+				color: #333;
+				background: #fff;
+			}
 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="skills-item">
-                                <div class="skills-name">
-                                    <h3>PYTHON</h3>
-                                </div>
-                                <div class="skill-progress">
-                                    <div class="progress-bar" style="width: 90%;">
+			.container {
+				width: 210mm;
+				height: 297mm;
+				margin: 0 auto;
+				background: white;
+				padding: 3mm 16mm;
+				position: relative;
+			}
 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="skills-item">
-                                <div class="skills-name">
-                                    <h3>HTML</h3>
-                                </div>
-                                <div class="skill-progress">
-                                    <div class="progress-bar" style="width: 90%;">
+			.header {
+				text-align: center;
+				border-bottom: 2.5px solid #2c3e50;
+				padding-bottom: 10px;
+				margin-bottom: 14px;
+			}
 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="skills-item">
-                                <div class="skills-name">
-                                    <h3>CSS</h3>
-                                </div>
-                                <div class="skill-progress">
-                                    <div class="progress-bar" style="width: 90%;">
+			.header h1 {
+				font-size: 28px;
+				color: #2c3e50;
+				margin-bottom: 6px;
+				font-weight: 700;
+			}
 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="skills-item">
-                                <div class="skills-name">
-                                    <h3>JAVASCRIPT</h3>
-                                </div>
-                                <div class="skill-progress">
-                                    <div class="progress-bar" style="width: 90%;">
+			.contact-info {
+				display: flex;
+				justify-content: center;
+				gap: 15px;
+				flex-wrap: wrap;
+				font-size: 10.5px;
+				color: #555;
+			}
 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="skills-item">
-                                <div class="skills-name">
-                                    <h3>REACT</h3>
-                                </div>
-                                <div class="skill-progress">
-                                    <div class="progress-bar" style="width: 90%;">
+			.contact-info a {
+				color: #3498db;
+				text-decoration: none;
+			}
 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="skills-item">
-                                <div class="skills-name">
-                                    <h3>SQL</h3>
-                                </div>
-                                <div class="skill-progress">
-                                    <div class="progress-bar" style="width: 90%;">
+			.section {
+				margin-bottom: 14px;
+			}
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="right-section">
-                <div class="right-main-content">
-                    <section class="about sect">
-                        <h2 class="right-title">About Me</h2>
-                        <p contenteditable="true" class="para">Dedicated code approaching Full Stack Web Developer with enthusiasm. Along with
-                            coding my
-                            hobbies are playing e-games, learning about stock market, photography. In college i used to
-                            be a volunteer in college fests. As never giving up and never say no personality, i would
-                            like to grow in desired industry and match the qualification and learn new skills as per
-                            requirements.</p>
-                    </section>
-                    <section class="education sect">
-                        <h2 class="right-title">Education</h2>
-                        <div class="education-content">
-                            <h3>Graduation</h3>
-                            <p class="para">
-                                <b>Samrat Ashok Technological Institute, Vidisha</b>
-                            </p>
-                            <p class="para">
-                                B.Tech. 7.94 CGPA 
-                                <br>
-                                2018-2022
-                            </p>
-                            <h3>Senior Secondary :</h3>
-                            <p class="para">
-                                <b>Saint Vidhya Sagar Convent, Waraseoni</b>
-                            </p>
-                            <p class="para">
-                                PCM 82.6% <br> 2016-2017
-                            </p>
-                            <h3>Secondary :</h3>
-                            <p class="para"><b>Saint Vidhya Sagar Convent, Waraseoni</b></p>
-                            <p class="para">
-                                10th 8.0 CGPA <br>
-                                2013-2014
-                            </p>
-                        </div>
-                    </section>
-                    <section class="experience sect">
-                        <h2 class="right-title">Experience</h2>
-                        <p class="para">
-                          Working as Technical Developer and Sales Speacialist in Lens
-                          Behind Momemnts since September,2022
-                        </p>
-                      </section>    
-                    <section class="Project">
-                        <h2 class="right-title">Projects</h2>
-                        <h3>
-                           Music Player
-                        </h3>
-                        <p>tech:- HTML, CSS, JavaScript</p>
-                        <p>Web application has more than 100 songs where you can download and play songs. Make your desired songs playlist.</p>
-                        <br>
-                        <h3>Green Screen Remover</h3>
-                        <p>tech:- HTML, CSS, JavaScript</p>
-                        <p>A website to remove the green screen from background with efficiency of 95.7%. Mainly used by Content Creators.</p>
-                        <br>
-                        <h3>Mobile Tab Navigation Bar</h3>
-                        <p>tech:- HTML , CSS</p>
-                        <p>
-                            Creating a Responsive navigation Bar for Mobile and Desktop
-                            devices.
-                        </p>
-                    </section>
-                </div>
-            </section>
-        </main>
-    </body>
+			.section-title {
+				font-size: 15px;
+				color: #2c3e50;
+				font-weight: 700;
+				border-bottom: 2px solid #3498db;
+				padding-bottom: 4px;
+				margin-bottom: 10px;
+				text-transform: uppercase;
+				letter-spacing: 0.7px;
+			}
 
+			.summary {
+				font-size: 11px;
+				line-height: 1.55;
+				color: #444;
+				text-align: justify;
+			}
+
+			.education-table {
+				width: 100%;
+				border-collapse: collapse;
+				font-size: 10px;
+			}
+
+			.education-table th {
+				background: #2c3e50;
+				color: white;
+				padding: 7px;
+				text-align: left;
+				font-weight: 600;
+			}
+
+			.education-table td {
+				padding: 7px;
+				border-bottom: 1px solid #ddd;
+			}
+
+			.job {
+				margin-bottom: 12px;
+			}
+
+			.job-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 6px;
+			}
+
+			.job-title {
+				font-size: 12.5px;
+				font-weight: 700;
+				color: #2c3e50;
+			}
+
+			.company {
+				font-size: 11.5px;
+				color: #3498db;
+				font-weight: 600;
+			}
+
+			.job-date {
+				font-size: 10px;
+				color: #777;
+				font-style: italic;
+			}
+
+			.job-description {
+				list-style: none;
+				padding-left: 0;
+			}
+
+			.job-description li {
+				padding-left: 14px;
+				margin-bottom: 5px;
+				position: relative;
+				font-size: 10.5px;
+				line-height: 1.5;
+			}
+
+			.job-description li:before {
+				content: "▹";
+				position: absolute;
+				left: 0;
+				color: #3498db;
+				font-weight: bold;
+			}
+
+			.job-description strong {
+				color: #2c3e50;
+			}
+
+			.cert-item {
+				margin-bottom: 8px;
+			}
+
+			.cert-name {
+				font-weight: 600;
+				color: #2c3e50;
+				font-size: 11px;
+				margin-bottom: 4px;
+			}
+
+			.cert-date {
+				color: #777;
+				font-size: 10px;
+				float: right;
+			}
+
+			.cert-details {
+				font-size: 10px;
+				color: #555;
+				padding-left: 14px;
+				line-height: 1.5;
+			}
+
+			.cert-details li {
+				margin-bottom: 3px;
+			}
+
+			.skills-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 10px;
+			}
+
+			.skill-category {
+				background: #f8f9fa;
+				padding: 8px 10px;
+				border-left: 2.5px solid #3498db;
+				border-radius: 2px;
+			}
+
+			.skill-category strong {
+				display: block;
+				color: #2c3e50;
+				margin-bottom: 5px;
+				font-size: 11px;
+			}
+
+			.skill-category p {
+				font-size: 10px;
+				color: #555;
+				line-height: 1.5;
+			}
+
+			@media print {
+				.certifications {
+					margin-top: 16mm;
+				}
+			}
+
+			@media print {
+				body {
+					background: white;
+				}
+
+				.container {
+					margin: 0;
+					padding: 5mm 16mm;
+					box-shadow: none;
+				}
+				.certifications {
+					page-break-before: always; /* Forces a page break before each certification item */
+				}
+
+				/* Add extra padding to the top of the next page after certification */
+				.certifications + .certifications {
+					padding-top: 10mm; /* Add padding to the next certification item */
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<!-- Header -->
+			<div class="header">
+				<h1>Anchal Deshmukh</h1>
+				<div class="contact-info">
+					<span>📞 +917747865703</span>
+					<span>✉️ anchaldeshmukh1999@gmail.com</span>
+					<span
+						>🔗
+						<a
+							href="https://www.linkedin.com/in/anchal-deshmukh-2315241a0/"
+							target="_blank"
+							>LinkedIn</a
+						></span
+					>
+					<span
+						>💻
+						<a href="https://github.com/Anchal789" target="_blank"
+							>GitHub</a
+						></span
+					>
+				</div>
+			</div>
+
+			<!-- Professional Summary -->
+			<div class="section">
+				<h2 class="section-title">Professional Summary</h2>
+				<p class="summary">
+					Senior frontend developer with 4 years of experience tackling
+					challenging UX problems and transforming business needs into smooth
+					digital experiences. Successfully delivered solutions for startups and
+					enterprises through production launch, consistently addressing both
+					user and business requirements. Proven track record in leading
+					frontend teams and building user-friendly interfaces for complex
+					applications.
+				</p>
+			</div>
+
+			<!-- Education -->
+			<div class="section">
+				<h2 class="section-title">Education</h2>
+				<table class="education-table">
+					<thead>
+						<tr>
+							<th>Year</th>
+							<th>Degree/Examination</th>
+							<th>Institution/Board</th>
+							<th>CGPA/Percentage</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>2022</td>
+							<td>Bachelor of Technology (Computer Science)</td>
+							<td>Samrat Ashok Technological Institute</td>
+							<td>7.94 CGPA</td>
+						</tr>
+						<tr>
+							<td>2017</td>
+							<td>Intermediate (Class XII)</td>
+							<td>Saint Vidhya Sagar Convent</td>
+							<td>83.0%</td>
+						</tr>
+						<tr>
+							<td>2015</td>
+							<td>Matriculation (Class X)</td>
+							<td>Saint Vidhya Sagar Convent</td>
+							<td>8.0 CGPA</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<!-- Experience -->
+			<div class="section">
+				<h2 class="section-title">Experience</h2>
+
+				<div class="job">
+					<div class="job-header">
+						<div>
+							<div class="company">Zuru Tech</div>
+							<div class="job-title">SDE II</div>
+						</div>
+						<div class="job-date">January 2026 - Present</div>
+					</div>
+					<ul class="job-description">
+						<li>
+							<strong>Team Leadership & Engineering Culture:</strong> Managing a
+							frontend sub-team of 3 developers; streamlined sprint workflows,
+							established strict code review guidelines, and introduced
+							standardized state management patterns across active repositories.
+						</li>
+						<li>
+							<strong>MES Migration & Architecture:</strong> Driving the core
+							architectural design to migrate the legacy Manufacturing Execution
+							System (MES) for China production units to a unified Next.js and
+							PostgreSQL stack, significantly reducing client-side bundle sizes
+							and latency.
+						</li>
+						<li>
+							<strong>Performance Optimization & Boilerplates:</strong>
+							Developed production-ready boilerplates and proof-of-concepts
+							(PoCs) featuring optimized Server-Side Rendering (SSR) strategies,
+							complex layout caching, and robust data-fetching layers to ensure
+							smooth real-time data streaming.
+						</li>
+						<li>
+							<strong>Technical Requirements Gathering:</strong> Partnering
+							closely with industrial manufacturing product owners to translate
+							complex shop-floor automation workflows into highly modular,
+							decoupled frontend technical specifications and UI architectures.
+						</li>
+					</ul>
+				</div>
+				<div class="job">
+					<div class="job-header">
+						<div>
+							<div class="company">Emgage HRMS Solutions</div>
+							<div class="job-title">Frontend Developer</div>
+						</div>
+						<div class="job-date">July 2024 - Present</div>
+					</div>
+					<ul class="job-description">
+						<li>
+							<strong>Product Owner – Customer Onboarding Portal:</strong> Took
+							full ownership of the Customer Onboarding Portal, leading the
+							project from concept to deployment. Developed the entire frontend
+							independently and contributed to approximately 30% of the backend,
+							collaborating closely with a backend developer responsible for the
+							remaining functionality
+						</li>
+						<li>
+							<strong>Took ownership</strong> of the complete frontend
+							lifecycle, reviewing and approving all UI/UX designs while
+							mentoring the UI/UX team and guiding frontend interns
+						</li>
+						<li>
+							<strong>Handled</strong> and managed the frontend team, providing
+							guidance and mentorship to build scalable frontend solutions under
+							my supervision
+						</li>
+						<li>
+							<strong>Enhanced</strong> user experience by researching and
+							integrating the Mantis Dashboard theme into the existing
+							application, improving design consistency and usability
+						</li>
+						<li>
+							<strong>Led</strong> frontend deployment processes using Jenkins
+							and MobaXterm, and built scalable, maintainable features with
+							TypeScript, TanStack Router, Zod, and Zustand
+						</li>
+						<!-- <li>
+							<strong>Projects</strong>
+							<ul style="list-style-type: none">
+								<li>
+									<strong>HRMS Software:</strong> I developed a comprehensive
+									HRM system with modules for TDS Form and Approvals, Leave
+									Application, RBAC, Employee Profiles, Company and Payroll
+									setup, Dashboard, Notifications, Theme Implementation,
+									Overtime, Leave & Attendance Policy, Task Management,
+									Candidate offer, Shift Management. Implementation of Theme in
+									software. Collab with backend & UI/UX team
+								</li>
+								<li>
+									<strong>Customer Onboarding:</strong> Developed a customer
+									onboarding portal that allows customers to create an account
+									and fill details about their company, SBU, compliances,
+									branches, employees, shifts, policies. The application
+									seamlessly migrates this data to the main HRM system, with
+									frontend and 40% of the backend development handled by me.
+								</li>
+								<li>
+									<strong>Employee Joining:</strong> Developed a employee
+									joining portal that allows employees to fill their details
+									before joining, helps to manage the employee profile,
+									compliances, payroll, attendance & leaves. The application
+									seamlessly migrates this data to the main HRM system
+								</li>
+							</ul>
+						</li> -->
+					</ul>
+				</div>
+
+				<div class="job">
+					<div class="job-header">
+						<div>
+							<div class="company">Go Highers Infotech</div>
+							<div class="job-title">React Developer</div>
+						</div>
+						<div class="job-date">May 2022 - June 2024</div>
+					</div>
+					<ul class="job-description">
+						<li>
+							<strong>Consistently showcased</strong> high technical
+							proficiency, particularly with React.js for dynamic user
+							interfaces and Next.js for server-side rendering and web
+							performance optimization
+						</li>
+						<li>
+							<strong>Developed and deployed</strong> a software update,
+							reducing system errors by 30% and improving application
+							performance by 25%
+						</li>
+						<li>
+							<strong>Managed</strong> the full lifecycle of application
+							development, from planning and design to implementation and
+							deployment
+						</li>
+						<li>
+							<strong>Enhanced</strong> client satisfaction by 20% through
+							problem-solving and delivering desired results in multiple
+							projects
+						</li>
+						<!-- <li>
+							<strong>Projects</strong>
+							<ul style="list-style-type: none">
+								<li>
+									<strong>E-Learning Platform:</strong> Developed an e-learning
+									platform using React.js, Next.js, and TypeScript, enabling
+									users to access educational content and resources. Implemented
+									features such as user authentication, course management, and
+									interactive learning experiences.
+								</li>
+								<li>
+									<strong>Multi-Tenant Analytics Dashboard:</strong> Designed
+									and Developed a dashboard for analyzing data from multiple
+									tenants and performance metrics. Implemented features such as
+									tenant selection, data aggregation, and interactive
+									visualizations.
+								</li>
+								<li>
+									<strong>LPG - Mandatory Inspection:</strong> Developed a web
+									application for LPG mandatory inspection of customers,
+									enabling them to conduct inspections and track their
+									inspections. RBAC for Admin and Super admin for adding
+									products and users.
+								</li>
+							</ul>
+						</li> -->
+					</ul>
+				</div>
+				<div class="section">
+				<h2 class="section-title">Technical Skills</h2>
+				<div class="skills-grid">
+					<div class="skill-category">
+						<strong>Programming Languages</strong>
+						<p>HTML5, CSS3, JavaScript (ES6+), TypeScript, Java</p>
+					</div>
+					<div class="skill-category">
+						<strong>Frontend Technologies</strong>
+						<p>
+							React.js, Next.js, Redux, Zustand, Express.js, Bootstrap, Tailwind
+							CSS, MUI, Mantine
+						</p>
+					</div>
+					<div class="skill-category">
+						<strong>Backend & Database</strong>
+						<p>Webpack, Jenkins, Git, Zod, Postgresql, MongoDB, REST APIs, GraphQL, Node.js</p>
+					</div>
+				</div>
+			</div>
+			</div>
+			<!-- Certifications -->
+			<div class="section certifications">
+				<h2 class="section-title">Certifications</h2>
+				<div class="cert-item">
+					<div class="cert-name">
+						Newton School Coding Bootcamp | Newton School
+						<span class="cert-date">August 2021</span>
+					</div>
+					<ul class="cert-details">
+						<li>
+							Completed intensive full-stack web development bootcamp with
+							comprehensive training in problem-solving and modern technologies
+						</li>
+						<li>
+							Technical skills: HTML5, CSS3, JavaScript (ES6+), React.js, Redux,
+							Node.js, Express.js, MongoDB. Participated in annual hackathons
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
